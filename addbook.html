@@ -1,0 +1,17 @@
+{% extends "booklease/base.html" %}
+
+{% block content %}
+
+<h1><font color="red" size="15"><u>Add Book</u></font></h1>
+
+<form action="" method="post">
+{% csrf_token %}
+<ul>
+{{form.as_p}}
+</ul>
+<br/>
+<button type="submit" value="submit"><b> Add Book</b></button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="reset" value="Reset"><b>Reset</b></button>
+</form>
+{% endblock %}

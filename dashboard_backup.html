@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dashboard</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+	
+}
+body{
+background-color:#FFF5EE;}
+
+</style>
+</head>
+<body>
+<center>
+      
+      <a href="Dashboard.html" title="home"><font color="Green"><b>Dashboard</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Editprofile.html" title="profile"><font color="Green"><b>Profile</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Booksowned.html" title="Bookowned"><font color="Green"><b>Book Owned</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Borrowedbooks.html" title="Rented books"><font color="Green"><b> Borrowed Books</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="Addbook.html" title="Addbook"><font color="Green"><b>Add a Book</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="Searchbook.html" title="Searchbook"><font color="Green"><b>Search a Book</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="Signin.html" title="Logout" onblur=""><font color="red">Logout</font></a>
+	  </br></br></br>
+	<img src="{% static "booklease/img/book.jpg" %}" height="200" width="700" />
+
+  <h1><font color="red" size="15"><u>WELCOME TO BOOK LEASE</u></font></h1>
+  
+  <div style="Color:#8B008B" align="left">
+  <a href="Editprofile.html" title="Edit profile"><font size="5">Edit Profile</font></a>
+  </br></br>
+  <a href="Viewprofile.html" title="View profile"><font size="5">View Profile</font></a>
+  </br></br></br>
+  <table>
+  <tr>
+ 
+  <th><b>Verified Information</b></th>
+  
+  </tr>
+  </br></br>
+  <tr>
+  
+  <td></br></br><b> Email Address</b></td>
+  </table>
+  </div>
+    
+     
+      
+    
+</body>
+</html>

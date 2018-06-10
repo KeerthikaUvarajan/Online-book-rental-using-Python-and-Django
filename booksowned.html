@@ -1,0 +1,25 @@
+{% extends "booklease/base.html" %}
+
+{% block content %}
+
+<h1><font color="red" size="15"><u>Books Owned</u></font></h1>
+
+{% if booklist.count > 0 %}
+	<table>
+	<th>Book Name</th>
+	<th>Book Author</th>
+	<th>Book Status</th>
+	<th>ISBN</th>
+	<th>Rent Price</th>
+	{% for book in booklist %}
+	<tr>
+	<td>{{ book.book_name }}</td>
+	<td>{{ book.book_author }}</td>
+	<td>{{ book.book_status }}</td>
+	<td>{{ book.isbn }}</td>
+	<td>{{ book.price }}</td>
+	</tr>
+	{% endfor%}
+{% endif %}
+
+{% endblock %}

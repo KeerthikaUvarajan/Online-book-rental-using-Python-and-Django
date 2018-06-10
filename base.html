@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}My Base Template{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{% get_static_prefix %}css/default.css" >
+	
+    <script src="{% get_static_prefix %}booklease/js/jquery-2.0.0.min.js"></script>
+    <script src="{% get_static_prefix %}booklease/js/ajax.js"></script>
+    
+</head>
+<style>
+button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 40px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+body{
+	text-align: center;
+	background-color:#FFF5EE;
+}
+</style>
+
+<body>
+	<div>
+      <a href="/booklease/dashboard" title="home"><font color="Green"><b>Dashboard</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/booklease/profile" title="profile"><font color="Green"><b>Profile</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/booklease/booksowned" title="Booksowned"><font color="Green"><b>Book Owned</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/booklease/rentedbooks" title="Rented books"><font color="Green"><b> Borrowed Books</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/booklease/addbook" title="Addbook"><font color="Green"><b>Add a Book</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="/booklease/searchbook" title="Searchbook"><font color="Green"><b>Search a Book</b></font></a>&nbsp;&nbsp;&nbsp;&nbsp;
+	  <a href="/booklease/logout" title="Logout" onblur=""><font color="red">Logout</font></a>
+	  </br></br></br>
+	<img src="{% static "booklease/img/book.jpg" %}" height="200" width="700" />
+ 	<center>
+    <div>
+            
+    {% block content %}This is the content area{% endblock %}
+	
+    </div>
+	</center>
+	</div>
+		
+</body>
+</html>

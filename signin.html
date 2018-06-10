@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Signin</title>
+<style>
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+body{
+background-color:#FFF5EE;}
+</style>
+    
+  </head>
+
+  <body>
+	<center>
+	<h2 class="form-signin-heading">Welcome To BookLease</h2>
+	<br />
+	<h2 class="form-signin-heading">USER LOG IN</h2>
+    <div class="container">
+		{% if form.errors %}
+			<p style="color: red;">
+				Please correct the error{{ form.errors|pluralize }} below.
+			</p>
+		{% endif %}		
+
+      <form class="form-signin" action="" method="post">
+		{% csrf_token %}
+		<br>
+		
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" bgcolor="grey" style="height:25px;width:200px" required autofocus>
+        <br/><br/>
+		<label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" style="height:25px;width:200px" required>
+		
+        <div class="checkbox">
+		<br>
+          <label>
+		  
+            <input type="checkbox" value="remember-me"> Remember me &nbsp; &nbsp;
+			<a href="url">Forgot Password ?</a>
+			
+          </label>
+		  </br>
+        </div>
+		<br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="location.href='Dashboard.html'" ><b>Log in</b></button>
+		</br>
+		<br>
+		</form>
+		
+	    <form class="form-signin" action="/booklease/register" method="get">
+		{% csrf_token %}
+	
+		<label for="link" class="sr-only">Don't have an account</label>
+		<button class="btn btn-lg btn-primary btn-block" type="submit"><b>Sign Up</b></button>
+		</br>
+		</form>
+		
+		</center>
+
+    </div>
+    </body>
+    </html>
